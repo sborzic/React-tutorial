@@ -1,38 +1,110 @@
-.App {
-  text-align: center;
+.board {
+  margin: 50px 0px 0px 130px;
+  height: 500px;
+  width: 500px;
+  background-color: black;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.board-wrapper {
+  display: flex;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.field {
+  display: flex;
+  justify-content: space-around;
+  width: 165px;
+  height: 165px;
+  background-color: white;
+  object-fit: contain;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.field > img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.score-bar {
+  width: 100%;
+  height: 100px;
+  display: flex;
+}
+
+.score-bar > div {
+  display: flex;
+  width: 50%;
+  height: 100%;
+}
+
+.player-one {
+  background-color: crimson;
+  justify-content: space-between;
+}
+
+.player-two {
+  background-color: blue;
+  justify-content: space-between;
+}
+
+.score-bar > div > img {
+  display: flex;
+  height: 90%;
+  width: auto;
+  justify-content: flex-start;
+}
+
+.player-two > img {
+  margin-right: 10px;
+}
+
+.points-box {
+  padding: 7px;
+  line-height: 100%;
+  width: auto;
+  color: whitesmoke;
+  font-size: 5rem;
+}
+
+.game-wrapper {
+  display: flex;
+}
+
+.buttons-wrapper {
+  margin-top: 50px;
+  width: 200px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.buttons-wrapper > button {
+  width: 70%;
+  height: 30px;
+  margin: 5px;
+  text-transform: uppercase;
+  background-color: silver;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.hidden-settings {
+  display: none;
+}
+
+.settings-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.settings-wrapper > span {
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+.settings-wrapper > button {
+  text-transform: capitalize;
+  margin-top: 15px;
+  height: 30px;
 }
